@@ -1,10 +1,19 @@
 name = input("Enter student name: ")
 
-math = float(input("Enter Mathematics marks: "))
-python = float(input("Enter Python marks: "))
-english = float(input("Enter English marks: "))
-computer = float(input("Enter Computer Science marks: "))
-statistics = float(input("Enter Statistics marks: "))
+def get_marks(subject):
+    while True:
+        marks = float(input(f"Enter {subject} marks (0-100): "))
+
+        if 0 <= marks <= 100:
+            return marks
+        else:
+            print("Invalid marks! Please enter a number between 0 and 100.")
+
+math = get_marks("Mathematics")
+python = get_marks("Python")
+english = get_marks("English")
+computer = get_marks("Computer Science")
+statistics = get_marks("Statistics")
 
 total = math + python + english + computer + statistics
 percentage = total / 5
