@@ -1,20 +1,29 @@
 name = input("Enter student name: ")
 
-marks = float(input("Enter marks (0-100): "))
+math = float(input("Enter Mathematics marks: "))
+python = float(input("Enter Python marks: "))
+english = float(input("Enter English marks: "))
+computer = float(input("Enter Computer Science marks: "))
+statistics = float(input("Enter Statistics marks: "))
 
-if marks >= 90:
+total = math + python + english + computer + statistics
+percentage = total / 5
+
+if percentage >= 90:
     grade = "A+"
-elif marks >= 80:
+elif percentage >= 80:
     grade = "A"
-elif marks >= 70:
+elif percentage >= 70:
     grade = "B"
-elif marks >= 60:
+elif percentage >= 60:
     grade = "C"
-elif marks >= 50:
+elif percentage >= 50:
     grade = "D"
 else:
     grade = "F"
 
-print("\nStudent:", name)
-print("Marks:", marks)
+print("\n----- Student Result -----")
+print("Student:", name)
+print("Total Marks:", total, "/ 500")
+print("Percentage:", percentage, "%")
 print("Grade:", grade)
