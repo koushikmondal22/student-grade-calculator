@@ -2,12 +2,16 @@ name = input("Enter student name: ")
 
 def get_marks(subject):
     while True:
-        marks = float(input(f"Enter {subject} marks (0-100): "))
+        try:
+            marks = float(input(f"Enter {subject} marks (0-100): "))
 
-        if 0 <= marks <= 100:
-            return marks
-        else:
-            print("Invalid marks! Please enter a number between 0 and 100.")
+            if 0 <= marks <= 100:
+                return marks
+            else:
+                print("Invalid marks! Please enter a number between 0 and 100.")
+
+        except ValueError:
+            print("Invalid input! Please enter a number.")
 
 math = get_marks("Mathematics")
 python = get_marks("Python")
