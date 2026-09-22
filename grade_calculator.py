@@ -14,18 +14,21 @@ if percentage >= 40:
 else:
     result = "FAIL"
 
-if percentage >= 90:
-    grade = "A+"
-elif percentage >= 80:
-    grade = "A"
-elif percentage >= 70:
-    grade = "B"
-elif percentage >= 60:
-    grade = "C"
-elif percentage >= 50:
-    grade = "D"
-else:
-    grade = "F"
+def calculate_grade(percentage):
+    if percentage >= 90:
+        return "A+"
+    elif percentage >= 80:
+        return "A"
+    elif percentage >= 70:
+        return "B"
+    elif percentage >= 60:
+        return "C"
+    elif percentage >= 50:
+        return "D"
+    else:
+        return "F"
+
+grade = calculate_grade(percentage)
 
 print("\n----- Student Result -----")
 print("Student:", name)
